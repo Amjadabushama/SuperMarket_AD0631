@@ -17,7 +17,13 @@ namespace SuperMarket_AD0631
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = MessageBox.Show(comboBox1.Text);
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Order : " + comboBox1.Text + "\n Quantity : " + comboBox2.Text);
+
         }
     }
 }

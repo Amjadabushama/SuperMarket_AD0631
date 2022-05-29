@@ -14,5 +14,11 @@ namespace SuperMarket_AD0631
         {
             InitializeComponent();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Order : " + comboBox1.Text + "\n Quantity : " + comboBox2.Text);
+
+        }
     }
 }

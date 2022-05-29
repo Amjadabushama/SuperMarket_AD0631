@@ -19,7 +19,7 @@ namespace SuperMarket_AD0631
         private void btnInsert_Click(object sender, EventArgs e)
         {
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " +
-                "Data Source=C:\\Users\\SCHOOL\\Desktop\\ibrahem AD0484\\SuperMarket_AD0484.accdb");
+                "Data Source=C:\\Users\\SCHOOL\\Desktop\\amjad abu\\table.accdb");
             con.Open();
             OleDbCommand cmd = new OleDbCommand("Insert into Courses values(@ID, @Name, @Number)", con);
             cmd.Parameters.AddWithValue("@ID", int.Parse(txtID.Text));
@@ -36,7 +36,7 @@ namespace SuperMarket_AD0631
         {
             string delete = "Delete From Courses Where ID=@ID";
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " +
-                "Data Source=C:\\Users\\SCHOOL\\Desktop\\ibrahem AD0484\\SuperMarket_AD0484.accdb");
+                "Data Source=C:\\Users\\SCHOOL\\Desktop\\amjad abu\\table.accdb");
 
             OleDbCommand cmd = new OleDbCommand(delete, con);
             cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
@@ -62,7 +62,7 @@ namespace SuperMarket_AD0631
         void GetAllCourses()
         {
             OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; " +
-                "Data Source =C:\\Users\\SCHOOL\\Desktop\\ibrahem AD0484\\SuperMarket_AD0484.accdb");
+                "Data Source =C:\\Users\\SCHOOL\\Desktop\\amjad abu\\table.accdb");
             DataTable dt = new DataTable();
             OleDbDataAdapter adapter = new OleDbDataAdapter("Select * from Courses", con);
             con.Open();
